@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fig 5.5 - Model Accuracy Comparison</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a2e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+    color: #e0e0e0;
+  }
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #16213e;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #0f3460;
+  }
+  h1 { color: #e94560; font-size: 22px; text-align: center; margin-bottom: 24px; }
+  .chart-wrapper { display: flex; gap: 40px; align-items: flex-start; }
+  .bar-chart {
+    flex: 1;
+    background: #1a1a2e;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #0f3460;
+  }
+  .bar-chart h3 { color: #e94560; font-size: 14px; margin-bottom: 16px; text-align: center; }
+  .bar-row {
+    display: flex; align-items: center; margin-bottom: 12px;
+  }
+  .bar-label { width: 120px; font-size: 12px; color: #e0e0e0; }
+  .bar-track {
+    flex: 1; height: 28px; background: #0a0a1a;
+    border-radius: 4px; position: relative; overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%; border-radius: 4px;
+    display: flex; align-items: center; justify-content: flex-end;
+    padding-right: 8px; font-size: 11px; font-weight: bold; color: white;
+  }
+  .lstm { background: #e94560; width: 85%; }
+  .xgboost { background: #0f3460; width: 92%; }
+  .prophet { background: #28a745; width: 88%; }
+  .ensemble { background: #ffd700; color: #1a1a2e; width: 96%; }
+
+  .metrics-table {
+    width: 320px;
+    background: #1a1a2e;
+    border-radius: 10px;
+    padding: 16px;
+    border: 1px solid #0f3460;
+  }
+  .metrics-table h3 { color: #e94560; font-size: 14px; margin-bottom: 12px; text-align: center; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 10px 8px; text-align: center; border: 1px solid #0f3460; font-size: 12px; }
+  th { background: #0f3460; color: #e94560; }
+  .best { background: #ffd700; color: #1a1a2e; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>📊 Model Accuracy Comparison - 30-Day Forecast (Tomato, Bowenpally Market)</h1>
+
+  <div class="chart-wrapper">
+    <div class="bar-chart">
+      <h3>Prediction Accuracy Score (%)</h3>
+      <div class="bar-row">
+        <div class="bar-label">LSTM</div>
+        <div class="bar-track">
+          <div class="bar-fill lstm">85%</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">XGBoost</div>
+        <div class="bar-track">
+          <div class="bar-fill xgboost">92%</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Prophet</div>
+        <div class="bar-track">
+          <div class="bar-fill prophet">88%</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><strong>Ensemble</strong></div>
+        <div class="bar-track">
+          <div class="bar-fill ensemble"><strong>96%</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="metrics-table">
+      <h3>Detailed Error Metrics</h3>
+      <table>
+        <tr>
+          <th>Model</th><th>RMSE (₹)</th><th>MAE (₹)</th><th>R²</th>
+        </tr>
+        <tr>
+          <td>LSTM</td><td>42.5</td><td>35.2</td><td>0.72</td>
+        </tr>
+        <tr>
+          <td>XGBoost</td><td>32.1</td><td>26.8</td><td>0.84</td>
+        </tr>
+        <tr>
+          <td>Prophet</td><td>38.7</td><td>31.5</td><td>0.78</td>
+        </tr>
+        <tr class="best">
+          <td><strong>Ensemble</strong></td>
+          <td><strong>24.3</strong></td>
+          <td><strong>19.6</strong></td>
+          <td><strong>0.91</strong></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div style="margin-top: 20px; padding: 12px; background: #1a1a2e; border-radius: 8px; border: 1px solid #0f3460; font-size: 12px; color: #888;">
+    <strong style="color: #e94560;">Note:</strong> Ensemble model combines LSTM (temporal patterns), XGBoost (feature interactions), and Prophet (seasonality) via a meta-learner that assigns adaptive weights based on per-horizon validation performance. Lower RMSE/MAE is better; higher R² is better (closer to 1.0).
+  </div>
+</div>
+</body>
+</html>
+

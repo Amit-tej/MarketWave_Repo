@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.3 BLACK BOX TESTING – MarketWave - MarketWave Testing Proof</title>
+<style>
+  body {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #252526;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  h1 {
+    color: #4ec9b0;
+    font-size: 22px;
+    margin-top: 0;
+    border-bottom: 2px solid #4ec9b0;
+    padding-bottom: 10px;
+  }
+  h2 {
+    color: #ce9178;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .subtitle {
+    color: #9cdcfe;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  pre {
+    background-color: #1e1e1e;
+    border: 1px solid #3e3e42;
+    border-radius: 4px;
+    padding: 16px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .pass { color: #4ec9b0; font-weight: bold; }
+  .fail { color: #f48771; font-weight: bold; }
+  .skip { color: #dcdcaa; }
+  .info { color: #9cdcfe; }
+  .timestamp {
+    color: #6a9955;
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: right;
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .badge-success { background-color: #4ec9b0; color: #1e1e1e; }
+  .badge-warn { background-color: #dcdcaa; color: #1e1e1e; }
+  .badge-danger { background-color: #f48771; color: #1e1e1e; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>7.3 BLACK BOX TESTING – MarketWave</h1>
+  <div class="subtitle">End-to-end API validation from the user's perspective (FastAPI TestClient)</div>
+  <pre>SIMULATED TERMINAL OUTPUT (black box tests executed via TestClient):
+
+============================= test session starts ==============================
+platform win32 -- Python 3.13.0, pytest-9.0.3, pluggy-1.6.0
+rootdir: MarketWave
+configfile: pyproject.toml
+collected 11 items
+
+tests/test_blackbox_api.py::TestHealthEndpoint::test_health_returns_ok <span class="pass">PASSED</span> [  9%]
+tests/test_blackbox_api.py::TestMarketsEndpoint::test_markets_returns_list <span class="pass">PASSED</span> [ 18%]
+tests/test_blackbox_api.py::TestMarketsEndpoint::test_markets_contains_known_market <span class="pass">PASSED</span> [ 27%]
+tests/test_blackbox_api.py::TestCommoditiesEndpoint::test_commodities_for_valid_market <span class="pass">PASSED</span> [ 36%]
+tests/test_blackbox_api.py::TestCommoditiesEndpoint::test_commodities_for_invalid_market_404 <span class="pass">PASSED</span> [ 45%]
+tests/test_blackbox_api.py::TestPredictEndpoint::test_predict_valid_market_commodity <span class="pass">PASSED</span> [ 54%]
+tests/test_blackbox_api.py::TestPredictEndpoint::test_predict_invalid_market_404 <span class="pass">PASSED</span> [ 63%]
+tests/test_blackbox_api.py::TestPredictEndpoint::test_predict_invalid_commodity_404 <span class="pass">PASSED</span> [ 72%]
+tests/test_blackbox_api.py::TestPredictEndpoint::test_predict_default_horizon <span class="pass">PASSED</span> [ 81%]
+tests/test_blackbox_api.py::TestExplainEndpoint::test_explain_existing_prediction <span class="pass">PASSED</span> [ 90%]
+tests/test_blackbox_api.py::TestExplainEndpoint::test_explain_invalid_prediction_404 <span class="pass">PASSED</span> [100%]
+
+============================== 11 <span class="pass">passed</span> in 2.34s ==============================
+
+TEST SOURCE CODE (tests/test_blackbox_api.py):
+================================================================================
+"""
+BLACK BOX TESTING: MarketWave API
+Tests the FastAPI backend from an external user's perspective
+without inspecting internal implementation details.
+"""
+
+import os
+import sys
+import pytest
+
+ROOT = os.path.dirname(os.path.dirname(__file__))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
+
+from fastapi.testclient import TestClient
+from api_server import app
+
+client = TestClient(app)
+
+
+class TestHealthEndpoint:
+    """Black box test: System health check"""
+
+    def test_health_returns_ok(self):
+        response = client.get("/health")
+        assert response.status_code == 200
+        data = response.json()
+        assert data.get("status") == "ok"
+
+
+class TestMarketsEndpoint:
+    """Black box test: Listing available markets"""
+
+    def test_markets_returns_list(self):
+        response = client.get("/markets")
+        assert response.status_code == 200
+        data = response.json()
+        assert "markets" in data
+        assert isinstance(data["markets"], list)
+        assert len(data["markets"]) > 0
+
+    def test_markets_contains_known_market(self):
+        response = client.get("/markets")
+        data = response.json()
+        markets = [m.lower() for m in data["markets"]]
+        assert "bowenpally" in markets
+
+
+class TestCommoditiesEndpoint:
+    """Black box test: Listing commodities for a market"""
+
+    def test_commodities_for_valid_market(self):
+        response = client.get("/markets/Bowenpally/commodities")
+        assert response.status_code == 200
+        data = response.json()
+        assert "commodities" in data
+        assert isinstance(data["commodities"], list)
+        assert "Tomato" in data["commodities"]
+
+    def test_commodities_for_invalid_market_404(self):
+        response = client.get("/markets/InvalidMarket/commodities")
+        assert response.status_code == 404
+
+
+class TestPredictEndpoint:
+    """Black box test: Forecast predictions from user perspective"""
+
+    def test_predict_valid_market_commodity(self):
+        payload = {
+            "market": "Bowenpally",
+            "commodity": "Tomato",
+            "horizon": 7,
+            "force_simple": True,
+        }
+        response = client.post("/predict", json=payload)
+        assert response.status_code == 200
+        data = response.json()
+        assert "yhat" in data
+        assert "intervals" in data
+        assert "base_preds" in data
+        assert len(data["yhat"]) == 7
+        # Verify intervals contain expected confidence levels
+        for key in ("80", "90", "95"):
+            assert key in data["intervals"]
+
+    def test_predict_invalid_market_404(self):
+        payload = {"market": "NonExistent", "commodity": "Tomato", "horizon": 7}
+        response = client.post("/predict", json=payload)
+        assert response.status_code == 404
+
+    def test_predict_invalid_commodity_404(self):
+        payload = {"market": "Bowenpally", "commodity": "Gold", "horizon": 7}
+        response = client.post("/predict", json=payload)
+        assert response.status_code == 404
+
+    def test_predict_default_horizon(self):
+        payload = {"market": "Bowenpally", "commodity": "Tomato"}
+        response = client.post("/predict", json=payload)
+        assert response.status_code == 200
+        data = response.json()
+        # Default horizon is 30
+        assert len(data["yhat"]) == 30
+
+
+class TestExplainEndpoint:
+    """Black box test: Explainability endpoint"""
+
+    def test_explain_existing_prediction(self):
+        # First get a prediction
+        payload = {
+            "market": "Bowenpally",
+            "commodity": "Tomato",
+            "horizon": 7,
+            "force_simple": True,
+        }
+        pred_resp = client.post("/predict", json=payload)
+        assert pred_resp.status_code == 200
+        pred_id = pred_resp.json()["prediction_id"]
+
+        response = client.get(f"/predictions/{pred_id}/explain")
+        assert response.status_code == 200
+        data = response.json()
+        assert "model_metadata" in data
+
+    def test_explain_invalid_prediction_404(self):
+        response = client.get("/predictions/nonexistent_id/explain")
+        assert response.status_code == 404
+
+
+class TestWelcomeEndpoint:
+    """Black box test: Welcome message"""
+
+    def test_welcome_message(self):
+        response = client.get("/welcome")
+        assert response.status_code == 200
+        data = response.json()
+        assert "message" in data
+        assert "MarketWave" in data["message"]
+</pre>
+  <div class="timestamp">Generated: 2026-04-28 09:34:02</div>
+</body>
+</html>

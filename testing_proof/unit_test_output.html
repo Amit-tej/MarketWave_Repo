@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.1 UNIT TESTING – MarketWave - MarketWave Testing Proof</title>
+<style>
+  body {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #252526;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  h1 {
+    color: #4ec9b0;
+    font-size: 22px;
+    margin-top: 0;
+    border-bottom: 2px solid #4ec9b0;
+    padding-bottom: 10px;
+  }
+  h2 {
+    color: #ce9178;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .subtitle {
+    color: #9cdcfe;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  pre {
+    background-color: #1e1e1e;
+    border: 1px solid #3e3e42;
+    border-radius: 4px;
+    padding: 16px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .pass { color: #4ec9b0; font-weight: bold; }
+  .fail { color: #f48771; font-weight: bold; }
+  .skip { color: #dcdcaa; }
+  .info { color: #9cdcfe; }
+  .timestamp {
+    color: #6a9955;
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: right;
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .badge-success { background-color: #4ec9b0; color: #1e1e1e; }
+  .badge-warn { background-color: #dcdcaa; color: #1e1e1e; }
+  .badge-danger { background-color: #f48771; color: #1e1e1e; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>7.1 UNIT TESTING – MarketWave</h1>
+  <div class="subtitle">Backend module validation using PyTest | tests/test_unit_data_preprocessing.py::TestLoadCsv::test_detect_date_column PASSED [  3%]</div>
+  <pre>============================= test session starts =============================
+platform win32 -- Python 3.13.0, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\bharg\Downloads\marketwave 2.0\venv_test\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\bharg\Downloads\marketwave 2.0
+plugins: cov-7.1.0
+collecting ... collected 32 items
+
+tests/test_unit_data_preprocessing.py::TestLoadCsv::test_detect_date_column <span class="pass">PASSED</span> [  3%]
+tests/test_unit_data_preprocessing.py::TestLoadCsv::test_no_date_column_warning <span class="pass">PASSED</span> [  6%]
+tests/test_unit_data_preprocessing.py::TestLoadCsv::test_rename_date_column <span class="pass">PASSED</span> [  9%]
+tests/test_unit_data_preprocessing.py::TestLoadDataset::test_load_existing_file <span class="pass">PASSED</span> [ 12%]
+tests/test_unit_data_preprocessing.py::TestLoadDataset::test_file_not_found_raises <span class="pass">PASSED</span> [ 15%]
+tests/test_unit_data_preprocessing.py::TestFilterTelanganaHyderabad::test_filters_correctly <span class="pass">PASSED</span> [ 18%]
+tests/test_unit_data_preprocessing.py::TestFilterTelanganaHyderabad::test_excludes_other_states <span class="pass">PASSED</span> [ 21%]
+tests/test_unit_data_preprocessing.py::TestPreprocessPrices::test_fill_missing_values <span class="pass">PASSED</span> [ 25%]
+tests/test_unit_data_preprocessing.py::TestPreprocessPrices::test_outlier_clipping <span class="pass">PASSED</span> [ 28%]
+tests/test_unit_data_preprocessing.py::TestPreprocessPrices::test_date_index_set <span class="pass">PASSED</span> [ 31%]
+tests/test_unit_data_preprocessing.py::TestPreprocessPrices::test_forward_fill_interpolation <span class="pass">PASSED</span> [ 34%]
+tests/test_unit_data_preprocessing.py::TestPreprocessPrices::test_all_price_cols_processed <span class="pass">PASSED</span> [ 37%]
+tests/test_unit_feature_engineering.py::TestAddTemporalFeatures::test_creates_expected_columns <span class="pass">PASSED</span> [ 40%]
+tests/test_unit_feature_engineering.py::TestAddTemporalFeatures::test_weekend_flag_correct <span class="pass">PASSED</span> [ 43%]
+tests/test_unit_feature_engineering.py::TestAddLagFeatures::test_lag_columns_created <span class="pass">PASSED</span> [ 46%]
+tests/test_unit_feature_engineering.py::TestAddLagFeatures::test_lag_values_correct <span class="pass">PASSED</span> [ 50%]
+tests/test_unit_feature_engineering.py::TestAddRollingStats::test_rolling_columns_created <span class="pass">PASSED</span> [ 53%]
+tests/test_unit_feature_engineering.py::TestAddRollingStats::test_rolling_mean_reasonable <span class="pass">PASSED</span> [ 56%]
+tests/test_unit_feature_engineering.py::TestAddMomentumRsi::test_momentum_and_rsi_created <span class="pass">PASSED</span> [ 59%]
+tests/test_unit_feature_engineering.py::TestAddMomentumRsi::test_rsi_within_bounds <span class="pass">PASSED</span> [ 62%]
+tests/test_unit_feature_engineering.py::TestAddFourierTerms::test_fourier_columns_created <span class="pass">PASSED</span> [ 65%]
+tests/test_unit_feature_engineering.py::TestPrepareFeatures::test_prepare_features_returns_df <span class="pass">PASSED</span> [ 68%]
+tests/test_unit_feature_engineering.py::TestPrepareFeatures::test_no_nans_after_prepare <span class="pass">PASSED</span> [ 71%]
+tests/test_unit_feature_engineering.py::TestPrepareFeatures::test_target_encoding_created <span class="pass">PASSED</span> [ 75%]
+tests/test_unit_feature_engineering.py::TestGetScalers::test_returns_dict <span class="pass">PASSED</span> [ 78%]
+tests/test_unit_prediction_engine.py::TestFallbackStatsPredict::test_returns_correct_shape <span class="pass">PASSED</span> [ 81%]
+tests/test_unit_prediction_engine.py::TestFallbackStatsPredict::test_predictions_deterministic <span class="pass">PASSED</span> [ 84%]
+tests/test_unit_prediction_engine.py::TestFallbackStatsPredict::test_empty_data_returns_nan <span class="pass">PASSED</span> [ 87%]
+tests/test_unit_prediction_engine.py::TestFallbackStatsPredict::test_no_p_modal_returns_nan <span class="pass">PASSED</span> [ 90%]
+tests/test_unit_prediction_engine.py::TestFallbackStatsPredict::test_intervals_present <span class="pass">PASSED</span> [ 93%]
+tests/test_unit_prediction_engine.py::TestPredictWithSimpleEnsemble::test_predicts_correct_shape <span class="fail">FAILED</span> [ 96%]
+tests/test_unit_prediction_engine.py::TestPredictWithSimpleEnsemble::test_predictions_are_numeric <span class="fail">FAILED</span> [100%]
+
+================================== FAILURES ===================================
+__________ TestPredictWithSimpleEnsemble.test_predicts_correct_shape __________
+
+self = <test_unit_prediction_engine.TestPredictWithSimpleEnsemble object at 0x0000019766C425D0>
+mock_ensemble_path = 'C:\\Users\\bharg\\AppData\\Local\\Temp\\pytest-of-bharg\\pytest-3\\test_predicts_correct_shape0\\ensemble_test.joblib'
+sample_price_df =          date   cmdty variety  ...        p_min        p_max      p_modal
+0  2023-01-01  Tomato   Local  ...   949.816...14.047199  1562.037993
+59 2023-03-01  Tomato   Local  ...   930.132132  1631.473794  1082.512566
+
+[60 rows x 9 columns]
+
+    def test_predicts_correct_shape(self, mock_ensemble_path, sample_price_df):
+        df = sample_price_df.set_index("date")
+        df["feat_a"] = np.random.randn(len(df))
+        df["feat_b"] = np.random.randn(len(df))
+>       result = predict_with_simple_ensemble(mock_ensemble_path, df, horizon=10)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_unit_prediction_engine.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+prediction_engine.py:44: in predict_with_simple_ensemble
+    pred1 = ensemble["m1"].predict(X_last)[0]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+venv_test\Lib\site-packages\sklearn\ensemble\_forest.py:1065: in predict
+    X = self._validate_X_predict(X)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+venv_test\Lib\site-packages\sklearn\ensemble\_forest.py:637: in _validate_X_predict
+    X = validate_data(
+venv_test\Lib\site-packages\sklearn\utils\validation.py:2923: in validate_data
+    _check_n_features(_estimator, X, reset=reset)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+estimator = RandomForestRegressor(n_estimators=5, random_state=42)
+X =             cmdty  variety  market_name  ...        p_max    feat_a    feat_b
+date                                    ...                   
+2023-03-01      0        0            0  ...  1631.473794  0.385317 -0.484234
+
+[1 rows x 9 columns]
+reset = False
+
+    def _check_n_features(estimator, X, reset):
+        """Set the `n_features_in_` attribute, or check against it on an estimator.
+    
+        .. note::
+            To only check n_features without conducting a full data validation, prefer
+            using `validate_data(..., skip_check_array=True)` if possible.
+    
+        .. versionchanged:: 1.6
+            Moved from :class:`~sklearn.base.BaseEstimator` to
+            :mod:`~sklearn.utils.validation`.
+    
+        Parameters
+        ----------
+        estimator : estimator instance
+            The estimator to validate the input for.
+    
+        X : {ndarray, sparse matrix} of shape (n_samples, n_features)
+            The input samples.
+    
+        reset : bool
+            Whether to reset the `n_features_in_` attribute.
+            If True, the `n_features_in_` attribute is set to `X.shape[1]`.
+            If False and the attribute exists, then check that it is equal to
+            `X.shape[1]`. If False and the attribute does *not* exist, then
+            the check is skipped.
+    
+            .. note::
+               It is recommended to call `reset=True` in `fit` and in the first
+               call to `partial_fit`. All other methods that validate `X`
+               should set `reset=False`.
+        """
+        try:
+            n_features = _num_features(X)
+        except TypeError as e:
+            if not reset and hasattr(estimator, "n_features_in_"):
+                raise ValueError(
+                    "X does not contain any features, but "
+                    f"{estimator.__class__.__name__} is expecting "
+                    f"{estimator.n_features_in_} features"
+                ) from e
+            # If the number of features is not defined and reset=True,
+            # then we skip this check
+            return
+    
+        if reset:
+            estimator.n_features_in_ = n_features
+            return
+    
+        if not hasattr(estimator, "n_features_in_"):
+            # Skip this check if the expected number of expected input features
+            # was not recorded by calling fit first. This is typically the case
+            # for stateless transformers.
+            return
+    
+        if n_features != estimator.n_features_in_:
+>           raise ValueError(
+                f"X has {n_features} features, but {estimator.__class__.__name__} "
+                f"is expecting {estimator.n_features_in_} features as input."
+            )
+E           ValueError: X has 9 features, but RandomForestRegressor is expecting 2 features as input.
+
+venv_test\Lib\site-packages\sklearn\utils\validation.py:2787: ValueError
+_________ TestPredictWithSimpleEnsemble.test_predictions_are_numeric __________
+
+self = <test_unit_prediction_engine.TestPredictWithSimpleEnsemble object at 0x0000019766C42710>
+mock_ensemble_path = 'C:\\Users\\bharg\\AppData\\Local\\Temp\\pytest-of-bharg\\pytest-3\\test_predictions_are_numeric0\\ensemble_test.joblib'
+sample_price_df =          date   cmdty variety  ...        p_min        p_max      p_modal
+0  2023-01-01  Tomato   Local  ...   949.816...14.047199  1562.037993
+59 2023-03-01  Tomato   Local  ...   930.132132  1631.473794  1082.512566
+
+[60 rows x 9 columns]
+
+    def test_predictions_are_numeric(self, mock_ensemble_path, sample_price_df):
+        df = sample_price_df.set_index("date")
+        df["feat_a"] = np.random.randn(len(df))
+        df["feat_b"] = np.random.randn(len(df))
+>       result = predict_with_simple_ensemble(mock_ensemble_path, df, horizon=5)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_unit_prediction_engine.py:70: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+prediction_engine.py:44: in predict_with_simple_ensemble
+    pred1 = ensemble["m1"].predict(X_last)[0]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+venv_test\Lib\site-packages\sklearn\ensemble\_forest.py:1065: in predict
+    X = self._validate_X_predict(X)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+venv_test\Lib\site-packages\sklearn\ensemble\_forest.py:637: in _validate_X_predict
+    X = validate_data(
+venv_test\Lib\site-packages\sklearn\utils\validation.py:2923: in validate_data
+    _check_n_features(_estimator, X, reset=reset)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+estimator = RandomForestRegressor(n_estimators=5, random_state=42)
+X =             cmdty  variety  market_name  ...        p_max    feat_a    feat_b
+date                                    ...                   
+2023-03-01      0        0            0  ...  1631.473794  0.385317 -0.484234
+
+[1 rows x 9 columns]
+reset = False
+
+    def _check_n_features(estimator, X, reset):
+        """Set the `n_features_in_` attribute, or check against it on an estimator.
+    
+        .. note::
+            To only check n_features without conducting a full data validation, prefer
+            using `validate_data(..., skip_check_array=True)` if possible.
+    
+        .. versionchanged:: 1.6
+            Moved from :class:`~sklearn.base.BaseEstimator` to
+            :mod:`~sklearn.utils.validation`.
+    
+        Parameters
+        ----------
+        estimator : estimator instance
+            The estimator to validate the input for.
+    
+        X : {ndarray, sparse matrix} of shape (n_samples, n_features)
+            The input samples.
+    
+        reset : bool
+            Whether to reset the `n_features_in_` attribute.
+            If True, the `n_features_in_` attribute is set to `X.shape[1]`.
+            If False and the attribute exists, then check that it is equal to
+            `X.shape[1]`. If False and the attribute does *not* exist, then
+            the check is skipped.
+    
+            .. note::
+               It is recommended to call `reset=True` in `fit` and in the first
+               call to `partial_fit`. All other methods that validate `X`
+               should set `reset=False`.
+        """
+        try:
+            n_features = _num_features(X)
+        except TypeError as e:
+            if not reset and hasattr(estimator, "n_features_in_"):
+                raise ValueError(
+                    "X does not contain any features, but "
+                    f"{estimator.__class__.__name__} is expecting "
+                    f"{estimator.n_features_in_} features"
+                ) from e
+            # If the number of features is not defined and reset=True,
+            # then we skip this check
+            return
+    
+        if reset:
+            estimator.n_features_in_ = n_features
+            return
+    
+        if not hasattr(estimator, "n_features_in_"):
+            # Skip this check if the expected number of expected input features
+            # was not recorded by calling fit first. This is typically the case
+            # for stateless transformers.
+            return
+    
+        if n_features != estimator.n_features_in_:
+>           raise ValueError(
+                f"X has {n_features} features, but {estimator.__class__.__name__} "
+                f"is expecting {estimator.n_features_in_} features as input."
+            )
+E           ValueError: X has 9 features, but RandomForestRegressor is expecting 2 features as input.
+
+venv_test\Lib\site-packages\sklearn\utils\validation.py:2787: ValueError
+============================== warnings summary ===============================
+tests/test_unit_prediction_engine.py::TestPredictWithSimpleEnsemble::test_predicts_correct_shape
+tests/test_unit_prediction_engine.py::TestPredictWithSimpleEnsemble::test_predictions_are_numeric
+  C:\Users\bharg\Downloads\marketwave 2.0\prediction_engine.py:28: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+  See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+    for col in feat_data.select_dtypes(include=["object", "category"]).columns:
+
+tests/test_unit_prediction_engine.py::TestPredictWithSimpleEnsemble::test_predicts_correct_shape
+tests/test_unit_prediction_engine.py::TestPredictWithSimpleEnsemble::test_predictions_are_numeric
+  C:\Users\bharg\Downloads\marketwave 2.0\venv_test\Lib\site-packages\sklearn\utils\validation.py:2684: UserWarning: X has feature names, but RandomForestRegressor was fitted without feature names
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+<span class="fail">FAILED</span> tests/test_unit_prediction_engine.py::TestPredictWithSimpleEnsemble::test_predicts_correct_shape
+<span class="fail">FAILED</span> tests/test_unit_prediction_engine.py::TestPredictWithSimpleEnsemble::test_predictions_are_numeric
+================== 2 <span class="fail">failed</span>, 30 <span class="pass">passed</span>, 4 warnings in 3.27s ===================
+
+</pre>
+  <div class="timestamp">Generated: 2026-04-28 09:31:39</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MarketWave – Testing Proof Dashboard</title>
+<style>
+  body {
+    background: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 20px;
+  }
+  .container {
+    max-width: 900px; margin: 0 auto;
+    background: #1e1e1e; border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  }
+  h1 { color: #4ec9b0; font-size: 28px; margin-top: 0; }
+  h2 { color: #ce9178; font-size: 18px; margin-top: 24px; }
+  p { line-height: 1.6; }
+  ul { line-height: 1.8; }
+  a {
+    color: #4ec9b0; text-decoration: none;
+    font-weight: bold;
+  }
+  a:hover { text-decoration: underline; }
+  .section {
+    background: #252526; border-radius: 8px;
+    padding: 16px; margin-top: 16px;
+    border-left: 4px solid #4ec9b0;
+  }
+  .section.wb { border-left-color: #ce9178; }
+  .section.bb { border-left-color: #dcdcaa; }
+  .section.ml { border-left-color: #9cdcfe; }
+  .timestamp { color: #6a9955; font-size: 12px; margin-top: 24px; text-align: right; }
+  .btn {
+    display: inline-block;
+    background: #4ec9b0;
+    color: #1e1e1e;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  .btn:hover { background: #3db89f; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>MarketWave – Testing Proof Dashboard</h1>
+  <p>
+    Use this dashboard to open each testing proof in your browser and capture screenshots
+    for your academic project report.
+  </p>
+
+  <div class="section">
+    <h2>7.1 Unit Testing</h2>
+    <p>Validates each individual module (data preprocessing, feature engineering, prediction engine)
+    in isolation using PyTest with mock datasets.</p>
+    <a href="unit_test_output.html" class="btn" target="_blank">Open Unit Test Terminal Output</a>
+  </div>
+
+  <div class="section wb">
+    <h2>7.2 White Box Testing</h2>
+    <p>Code-coverage analysis using <code>pytest-cov</code> over internal functions, branches,
+    loops, and control structures in the backend modules.</p>
+    <a href="whitebox_coverage.html" class="btn" target="_blank">Open White Box Coverage Report</a>
+  </div>
+
+  <div class="section bb">
+    <h2>7.3 Black Box Testing</h2>
+    <p>End-to-end API validation from the user's perspective (FastAPI TestClient).
+    Tests response schemas, error codes, default horizons, and explainability endpoints.</p>
+    <a href="blackbox_test_output.html" class="btn" target="_blank">Open Black Box Test Output</a>
+  </div>
+
+  <div class="section ml">
+    <h2>7.4 Machine Learning–Specific Testing</h2>
+    <p>Data validation, model performance metrics (RMSE, MAE, R²), cross-validation,
+    prediction interval coverage, residual analysis, and bias testing.</p>
+    <a href="ml_testing_summary.html" class="btn" target="_blank">Open ML Testing Summary & Plots</a>
+  </div>
+
+  <div class="timestamp">
+    Generated: 2026-04-28 09:34:02
+  </div>
+</body>
+</html>

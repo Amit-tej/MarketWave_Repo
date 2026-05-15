@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 40px; background: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; }
+  .container { width: 1000px; margin: 0 auto; }
+  h1 { text-align: center; color: #2c3e50; font-size: 22px; margin-bottom: 30px; }
+  .flowchart { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .step { 
+    padding: 15px 40px; 
+    border-radius: 25px; 
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 14px;
+    min-width: 250px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin: 5px 0;
+  }
+  .start { background: #4caf50; color: white; }
+  .process { background: #fff3e0; border: 2px solid #ff9800; color: #e65100; }
+  .decision { 
+    background: #e3f2fd; 
+    border: 2px solid #2196f3; 
+    color: #1565c0;
+    transform: rotate(0deg);
+    border-radius: 8px;
+  }
+  .data { background: #f3e5f5; border: 2px solid #9c27b0; color: #6a1b9a; }
+  .end { background: #e91e63; color: white; }
+  .arrow-down {
+    width: 2px;
+    height: 25px;
+    background: #666;
+    position: relative;
+  }
+  .arrow-down::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -4px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid #666;
+  }
+  .side-by-side { display: flex; gap: 20px; justify-content: center; margin: 10px 0; }
+  .side-box { 
+    padding: 12px 25px; 
+    border-radius: 8px; 
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .yes-no { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    font-size: 11px; 
+    color: #666;
+    margin: 5px 0;
+  }
+  .annotation { 
+    font-size: 11px; 
+    color: #666; 
+    font-style: italic;
+    text-align: center;
+    margin: 5px 0;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Figure 5.2: Data Preprocessing Flowchart – From Raw CSV to Clean Dataset</h1>
+  
+  <div class="flowchart">
+    <div class="step start">📂 START: Raw CSV Input<br><span style="font-size:11px; font-weight:normal;">tomato_price_data2021-2024.csv</span></div>
+    <div class="arrow-down"></div>
+    
+    <div class="step process">1️⃣ Load CSV File<br><span style="font-size:11px; font-weight:normal;">Detect date column, parse dates</span></div>
+    <div class="arrow-down"></div>
+    
+    <div class="step decision">❓ Is date column detected?</div>
+    <div class="yes-no">
+      <span style="color:#4caf50;">✓ YES → Rename to 'date'</span>
+      <span>│</span>
+      <span style="color:#f44336;">✗ NO → Try to infer from data</span>
+    </div>
+    <div class="arrow-down"></div>
+    
+    <div class="step process">2️⃣ Filter Data<br><span style="font-size:11px; font-weight:normal;">Keep only Telangana / Hyderabad records</span></div>
+    <div class="arrow-down"></div>
+    
+    <div class="step decision">❓ Missing values in price columns?</div>
+    <div class="yes-no">
+      <span style="color:#4caf50;">✓ YES → Forward fill → Backward fill → Interpolate</span>
+    </div>
+    <div class="arrow-down"></div>
+    
+    <div class="step process">3️⃣ Outlier Detection (IQR Method)<br><span style="font-size:11px; font-weight:normal;">Q1, Q3 → IQR = Q3-Q1 → Clip at Q1-1.5×IQR and Q3+1.5×IQR</span></div>
+    <div class="arrow-down"></div>
+    
+    <div class="step decision">❓ Are outliers present?</div>
+    <div class="yes-no">
+      <span style="color:#4caf50;">✓ YES → Clip to bounds</span>
+      <span>│</span>
+      <span style="color:#2196f3;">✗ NO → Keep values as-is</span>
+    </div>
+    <div class="arrow-down"></div>
+    
+    <div class="step process">4️⃣ Set Date Index & Sort<br><span style="font-size:11px; font-weight:normal;">df.set_index('date').sort_index()</span></div>
+    <div class="arrow-down"></div>
+    
+    <div class="step data">📊 Clean Dataset Ready<br><span style="font-size:11px; font-weight:normal;">No NaN, no outliers, datetime index</span></div>
+    <div class="arrow-down"></div>
+    
+    <div class="step process">5️⃣ Send to Feature Engineering</div>
+    <div class="arrow-down"></div>
+    
+    <div class="step end">✅ END: Preprocessed Data</div>
+  </div>
+  
+  <p class="annotation" style="margin-top: 20px;">
+    Note: All price columns (p_min, p_max, p_modal) are processed uniformly through the same pipeline.
+  </p>
+</div>
+</body>
+</html>
+

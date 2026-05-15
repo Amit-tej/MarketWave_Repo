@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 40px; background: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; }
+  .container { width: 1100px; margin: 0 auto; }
+  h1 { text-align: center; color: #2c3e50; font-size: 22px; margin-bottom: 30px; }
+  .architecture { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    gap: 15px;
+  }
+  .layer { 
+    display: flex; 
+    gap: 30px; 
+    justify-content: center; 
+    align-items: stretch;
+  }
+  .box { 
+    padding: 20px 25px; 
+    border-radius: 10px; 
+    text-align: center; 
+    min-width: 180px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .box h3 { margin: 0 0 8px 0; font-size: 15px; }
+  .box p { margin: 0; font-size: 11px; color: #555; }
+  .input-layer { background: #e8f5e9; border: 2px solid #4caf50; }
+  .base-model { background: #e3f2fd; border: 2px solid #2196f3; }
+  .meta-learner { background: #f3e5f5; border: 2px solid #9c27b0; }
+  .output-layer { background: #fce4ec; border: 2px solid #e91e63; }
+  .arrow-down {
+    width: 2px;
+    height: 30px;
+    background: #666;
+    position: relative;
+  }
+  .arrow-down::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -4px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid #666;
+  }
+  .label { 
+    font-size: 12px; 
+    color: #666; 
+    font-style: italic;
+    margin: 5px 0;
+  }
+  .detail-panel {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-top: 20px;
+  }
+  .detail-panel h4 { color: #333; margin: 0 0 10px 0; }
+  .detail-panel ul { margin: 0; padding-left: 20px; font-size: 12px; color: #555; }
+  .detail-panel li { margin: 4px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Figure 5.3: Ensemble Model Architecture – Internal Procedure</h1>
+  
+  <div class="architecture">
+    <!-- Input Layer -->
+    <div class="box input-layer">
+      <h3>📊 Input Features</h3>
+      <p>60 days of preprocessed price data<br>
+      Temporal features, lag features<br>
+      Rolling statistics, Fourier terms</p>
+    </div>
+    
+    <div class="arrow-down"></div>
+    <div class="label">Feature Matrix X → Three parallel predictions</div>
+    
+    <!-- Base Models Layer -->
+    <div class="layer">
+      <div class="box base-model">
+        <h3>🌲 XGBoost</h3>
+        <p>Gradient Boosting Regressor<br>
+        Tree-based predictions<br>
+        Feature importance analysis</p>
+      </div>
+      <div class="box base-model">
+        <h3>📈 Prophet</h3>
+        <p>Additive regression model<br>
+        Trend + Seasonality<br>
+        Automatic changepoints</p>
+      </div>
+      <div class="box base-model">
+        <h3>🧠 LSTM</h3>
+        <p>Long Short-Term Memory<br>
+        Sequential pattern learning<br>
+        90-day lookback window</p>
+      </div>
+    </div>
+    
+    <div class="arrow-down"></div>
+    <div class="label">Base predictions → Stacking</div>
+    
+    <!-- Meta Learner -->
+    <div class="box meta-learner">
+      <h3>⚙️ Meta-Learner (Ridge Regression)</h3>
+      <p>Combines: XGBoost_pred + Prophet_pred + LSTM_pred<br>
+      Learns optimal weights per horizon<br>
+      Outputs final ensemble prediction</p>
+    </div>
+    
+    <div class="arrow-down"></div>
+    <div class="

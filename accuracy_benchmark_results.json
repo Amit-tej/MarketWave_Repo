@@ -1,0 +1,1313 @@
+{
+  "benchmark_date": "2025-09-25T20:24:44.409339",
+  "datasets": {
+    "brinjal_price_data2021-2024.csv": {
+      "filename": "brinjal_price_data2021-2024.csv",
+      "total_rows": 4666,
+      "processed_rows": 4666,
+      "markets": {
+        "Gudimalkapur_Brinjal": {
+          "market": "Gudimalkapur",
+          "commodity": "Brinjal",
+          "data_points": 1248,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 653.7567635526506,
+                "rmse": 787.675259440913,
+                "mape": 59.17521393457405,
+                "r2": -2.304431736724705,
+                "n_samples": 312
+              },
+              {
+                "mae": 523.2946004531783,
+                "rmse": 629.6922455176438,
+                "mape": 56.062633360282675,
+                "r2": 0.07354883409516955,
+                "n_samples": 312
+              },
+              {
+                "mae": 509.65443178791884,
+                "rmse": 582.1874885352274,
+                "mape": 48.64615203608699,
+                "r2": -0.7874409160500926,
+                "n_samples": 312
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 27.24358974358974,
+                "width": 596.0137890058882,
+                "valid_intervals": 312
+              },
+              {
+                "coverage": 26.282051282051285,
+                "width": 587.4593923215731,
+                "valid_intervals": 312
+              },
+              {
+                "coverage": 32.69230769230769,
+                "width": 614.3369772502907,
+                "valid_intervals": 312
+              }
+            ]
+          }
+        },
+        "Bowenpally_Brinjal": {
+          "market": "Bowenpally",
+          "commodity": "Brinjal",
+          "data_points": 1226,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 2674.405919553224,
+                "rmse": 2833.6790733653984,
+                "mape": 140.71123548181015,
+                "r2": -20.24462074107457,
+                "n_samples": 306
+              },
+              {
+                "mae": 783.122615934469,
+                "rmse": 1008.6474766123335,
+                "mape": 46.40605361693086,
+                "r2": -1.7103894942428362,
+                "n_samples": 306
+              },
+              {
+                "mae": 861.0030263231263,
+                "rmse": 992.065620622008,
+                "mape": 48.64060628437429,
+                "r2": -1.927766175880925,
+                "n_samples": 306
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 1.3071895424836601,
+                "width": 1033.403991190893,
+                "valid_intervals": 306
+              },
+              {
+                "coverage": 43.4640522875817,
+                "width": 1062.9885159333226,
+                "valid_intervals": 306
+              },
+              {
+                "coverage": 33.66013071895425,
+                "width": 1078.5408028387935,
+                "valid_intervals": 306
+              }
+            ]
+          }
+        },
+        "L B Nagar_Brinjal": {
+          "market": "L B Nagar",
+          "commodity": "Brinjal",
+          "data_points": 1045,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 527.023171801189,
+                "rmse": 678.7106710384902,
+                "mape": 28.681034999349592,
+                "r2": 0.02138848493899337,
+                "n_samples": 261
+              },
+              {
+                "mae": 784.1167211720892,
+                "rmse": 1068.3076445796705,
+                "mape": 30.238571917956186,
+                "r2": -0.8450608474137009,
+                "n_samples": 261
+              },
+              {
+                "mae": 1030.1182541399623,
+                "rmse": 1233.6444162835153,
+                "mape": 41.046841069091286,
+                "r2": -2.212120271227114,
+                "n_samples": 261
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 39.08045977011494,
+                "width": 661.2774708892438,
+                "valid_intervals": 261
+              },
+              {
+                "coverage": 41.37931034482759,
+                "width": 586.7144502704808,
+                "valid_intervals": 261
+              },
+              {
+                "coverage": 19.157088122605366,
+                "width": 634.2342964881227,
+                "valid_intervals": 261
+              }
+            ]
+          }
+        },
+        "Mahboob Manison_Brinjal": {
+          "market": "Mahboob Manison",
+          "commodity": "Brinjal",
+          "data_points": 684,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 1185.3436623100934,
+                "rmse": 1421.240997505387,
+                "mape": 63.39820819302886,
+                "r2": -4.47694184997772,
+                "n_samples": 171
+              },
+              {
+                "mae": 1009.7489712191208,
+                "rmse": 1125.6551278106297,
+                "mape": 76.00447871248618,
+                "r2": -0.6685910209298749,
+                "n_samples": 171
+              },
+              {
+                "mae": 581.6989402581672,
+                "rmse": 783.3010203497979,
+                "mape": 26.395105759593875,
+                "r2": -0.2546778930474234,
+                "n_samples": 171
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 27.485380116959064,
+                "width": 1264.6353310816214,
+                "valid_intervals": 171
+              },
+              {
+                "coverage": 17.543859649122805,
+                "width": 1090.6639938785695,
+                "valid_intervals": 171
+              },
+              {
+                "coverage": 54.385964912280706,
+                "width": 1118.2239391720211,
+                "valid_intervals": 171
+              }
+            ]
+          }
+        },
+        "Erragadda(Rythu Bazar)_Brinjal": {
+          "market": "Erragadda(Rythu Bazar)",
+          "commodity": "Brinjal",
+          "data_points": 463,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 830.8427481013184,
+                "rmse": 1090.5491744331475,
+                "mape": 27.0448191814012,
+                "r2": -0.709172074636786,
+                "n_samples": 115
+              },
+              {
+                "mae": 1244.9350260042434,
+                "rmse": 1556.5056188652509,
+                "mape": 43.24994797453541,
+                "r2": -2.2113748360872014,
+                "n_samples": 115
+              },
+              {
+                "mae": 1196.3571546635185,
+                "rmse": 1420.0019504915504,
+                "mape": 41.03120255761606,
+                "r2": -3.1165521776543867,
+                "n_samples": 115
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 43.47826086956522,
+                "width": 1053.1045458688532,
+                "valid_intervals": 115
+              },
+              {
+                "coverage": 27.82608695652174,
+                "width": 1093.624381931044,
+                "valid_intervals": 115
+              },
+              {
+                "coverage": 19.130434782608695,
+                "width": 1183.144161543598,
+                "valid_intervals": 115
+              }
+            ]
+          }
+        }
+      },
+      "commodities": [
+        "Brinjal"
+      ],
+      "market_names": [
+        "Bowenpally",
+        "Gudimalkapur",
+        "L B Nagar",
+        "Erragadda(Rythu Bazar)",
+        "Mahboob Manison"
+      ]
+    },
+    "greenchilli_price_data2021-2024.csv": {
+      "filename": "greenchilli_price_data2021-2024.csv",
+      "total_rows": 4656,
+      "processed_rows": 4656,
+      "markets": {
+        "Gudimalkapur_Green Chilli": {
+          "market": "Gudimalkapur",
+          "commodity": "Green Chilli",
+          "data_points": 1249,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 5929.954656420481,
+                "rmse": 6551.971074070969,
+                "mape": 273.2695128718881,
+                "r2": -51.81093057089083,
+                "n_samples": 312
+              },
+              {
+                "mae": 979.7782111143492,
+                "rmse": 1572.6527347472002,
+                "mape": 26.095088079837375,
+                "r2": -0.29426679737601,
+                "n_samples": 312
+              },
+              {
+                "mae": 824.9708762532379,
+                "rmse": 1058.7544414646873,
+                "mape": 39.006760348506994,
+                "r2": -0.35118569187551296,
+                "n_samples": 312
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 1.9230769230769231,
+                "width": 945.9538450950931,
+                "valid_intervals": 312
+              },
+              {
+                "coverage": 53.84615384615385,
+                "width": 1055.6128314403031,
+                "valid_intervals": 312
+              },
+              {
+                "coverage": 46.47435897435898,
+                "width": 1173.2052726896188,
+                "valid_intervals": 312
+              }
+            ]
+          }
+        },
+        "Bowenpally_Green Chilli": {
+          "market": "Bowenpally",
+          "commodity": "Green Chilli",
+          "data_points": 1244,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 1393.944016205248,
+                "rmse": 1650.9836770291006,
+                "mape": 39.563594514464164,
+                "r2": -0.5020306213716978,
+                "n_samples": 311
+              },
+              {
+                "mae": 940.5486029960616,
+                "rmse": 1390.637515075347,
+                "mape": 22.797954065030595,
+                "r2": -0.31052292233717593,
+                "n_samples": 311
+              },
+              {
+                "mae": 1308.750277118898,
+                "rmse": 1576.0099061549267,
+                "mape": 53.56537681208587,
+                "r2": -1.6706734631594102,
+                "n_samples": 311
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 25.401929260450164,
+                "width": 1253.307037046654,
+                "valid_intervals": 311
+              },
+              {
+                "coverage": 64.63022508038586,
+                "width": 1587.6141137885445,
+                "valid_intervals": 311
+              },
+              {
+                "coverage": 35.69131832797427,
+                "width": 1531.3103380562516,
+                "valid_intervals": 311
+              }
+            ]
+          }
+        },
+        "L B Nagar_Green Chilli": {
+          "market": "L B Nagar",
+          "commodity": "Green Chilli",
+          "data_points": 1026,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 2269.578196927466,
+                "rmse": 2584.1496554102005,
+                "mape": 84.89027250337351,
+                "r2": -6.6160388238190855,
+                "n_samples": 256
+              },
+              {
+                "mae": 1388.6914953417077,
+                "rmse": 1944.284036533007,
+                "mape": 34.087606592338005,
+                "r2": -0.8900192694397941,
+                "n_samples": 256
+              },
+              {
+                "mae": 1091.246769133716,
+                "rmse": 1345.634915851512,
+                "mape": 48.59081362378605,
+                "r2": -0.2506694763058741,
+                "n_samples": 256
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 9.765625,
+                "width": 888.3681833707069,
+                "valid_intervals": 256
+              },
+              {
+                "coverage": 32.421875,
+                "width": 956.315155312331,
+                "valid_intervals": 256
+              },
+              {
+                "coverage": 30.46875,
+                "width": 972.1743770770427,
+                "valid_intervals": 256
+              }
+            ]
+          }
+        },
+        "Mahboob Manison_Green Chilli": {
+          "market": "Mahboob Manison",
+          "commodity": "Green Chilli",
+          "data_points": 684,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 2585.7711528735963,
+                "rmse": 3171.610418627374,
+                "mape": 59.95304889556217,
+                "r2": -2.4266384705211923,
+                "n_samples": 171
+              },
+              {
+                "mae": 1261.1579359526495,
+                "rmse": 1500.4979630522353,
+                "mape": 32.16439103534627,
+                "r2": -2.7473853808600723,
+                "n_samples": 171
+              },
+              {
+                "mae": 1274.570394320963,
+                "rmse": 1498.624493263693,
+                "mape": 48.959656205942544,
+                "r2": -0.49881996547612895,
+                "n_samples": 171
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 8.771929824561402,
+                "width": 1038.6805790165402,
+                "valid_intervals": 171
+              },
+              {
+                "coverage": 28.654970760233915,
+                "width": 1181.8192278503407,
+                "valid_intervals": 171
+              },
+              {
+                "coverage": 21.052631578947366,
+                "width": 1152.5990453384193,
+                "valid_intervals": 171
+              }
+            ]
+          }
+        },
+        "Erragadda(Rythu Bazar)_Green Chilli": {
+          "market": "Erragadda(Rythu Bazar)",
+          "commodity": "Green Chilli",
+          "data_points": 453,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 3451.747019888981,
+                "rmse": 3827.398782984015,
+                "mape": 90.0931922293954,
+                "r2": -21.874450349962963,
+                "n_samples": 113
+              },
+              {
+                "mae": 1025.6002413161686,
+                "rmse": 1270.331987233108,
+                "mape": 20.546795655762036,
+                "r2": -0.21493467564449764,
+                "n_samples": 113
+              },
+              {
+                "mae": 1052.9264788951905,
+                "rmse": 1252.8963561407222,
+                "mape": 24.151589843969788,
+                "r2": -0.2700038932742812,
+                "n_samples": 113
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 7.964601769911504,
+                "width": 1739.4593464531717,
+                "valid_intervals": 113
+              },
+              {
+                "coverage": 53.09734513274337,
+                "width": 1621.2875986439556,
+                "valid_intervals": 113
+              },
+              {
+                "coverage": 45.13274336283185,
+                "width": 1570.8226885179336,
+                "valid_intervals": 113
+              }
+            ]
+          }
+        }
+      },
+      "commodities": [
+        "Green Chilli"
+      ],
+      "market_names": [
+        "Bowenpally",
+        "Gudimalkapur",
+        "L B Nagar",
+        "Erragadda(Rythu Bazar)",
+        "Mahboob Manison"
+      ]
+    },
+    "onion_price_data2021-2024.csv": {
+      "filename": "onion_price_data2021-2024.csv",
+      "total_rows": 4836,
+      "processed_rows": 4836,
+      "markets": {
+        "Mahboob Manison_Onion": {
+          "market": "Mahboob Manison",
+          "commodity": "Onion",
+          "data_points": 1635,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 1307.7760811912053,
+                "rmse": 1518.9794750544675,
+                "mape": 110.36585099904043,
+                "r2": -12.92451632616695,
+                "n_samples": 408
+              },
+              {
+                "mae": 779.2190496368979,
+                "rmse": 1099.1409049163415,
+                "mape": 42.40168804044387,
+                "r2": -0.8095994936626014,
+                "n_samples": 408
+              },
+              {
+                "mae": 935.392518658041,
+                "rmse": 1132.3832692255546,
+                "mape": 62.671974834245404,
+                "r2": -1.151011780759811,
+                "n_samples": 408
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 15.931372549019606,
+                "width": 882.5684276006158,
+                "valid_intervals": 408
+              },
+              {
+                "coverage": 49.754901960784316,
+                "width": 893.8204334274427,
+                "valid_intervals": 408
+              },
+              {
+                "coverage": 34.31372549019608,
+                "width": 950.4751269154652,
+                "valid_intervals": 408
+              }
+            ]
+          }
+        },
+        "Bowenpally_Onion": {
+          "market": "Bowenpally",
+          "commodity": "Onion",
+          "data_points": 1226,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 389.95822980937226,
+                "rmse": 491.12684318365143,
+                "mape": 35.24724257059621,
+                "r2": -0.08152374811363328,
+                "n_samples": 306
+              },
+              {
+                "mae": 600.7829886583858,
+                "rmse": 906.2549512918122,
+                "mape": 34.858684643214886,
+                "r2": -0.7781118398405529,
+                "n_samples": 306
+              },
+              {
+                "mae": 998.4406846878621,
+                "rmse": 1218.6841700574396,
+                "mape": 64.23442667850819,
+                "r2": -1.4981443319531778,
+                "n_samples": 306
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 53.26797385620915,
+                "width": 682.9439249622915,
+                "valid_intervals": 306
+              },
+              {
+                "coverage": 50.326797385620914,
+                "width": 641.3651309277656,
+                "valid_intervals": 306
+              },
+              {
+                "coverage": 25.49019607843137,
+                "width": 623.9261984911818,
+                "valid_intervals": 306
+              }
+            ]
+          }
+        },
+        "Gudimalkapur_Onion": {
+          "market": "Gudimalkapur",
+          "commodity": "Onion",
+          "data_points": 1204,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 366.0150493832753,
+                "rmse": 445.31531158904994,
+                "mape": 40.48764759928786,
+                "r2": -1.422739526902728,
+                "n_samples": 301
+              },
+              {
+                "mae": 568.981132359016,
+                "rmse": 754.0617116417953,
+                "mape": 49.85657475336582,
+                "r2": -0.11932311820627173,
+                "n_samples": 301
+              },
+              {
+                "mae": 982.4086650660454,
+                "rmse": 1231.7510989491677,
+                "mape": 43.86043497075093,
+                "r2": -1.9977004452527236,
+                "n_samples": 301
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 46.179401993355484,
+                "width": 576.1031911133412,
+                "valid_intervals": 301
+              },
+              {
+                "coverage": 20.26578073089701,
+                "width": 506.64193410476446,
+                "valid_intervals": 301
+              },
+              {
+                "coverage": 30.23255813953488,
+                "width": 495.20385801364233,
+                "valid_intervals": 301
+              }
+            ]
+          }
+        },
+        "Erragadda(Rythu Bazar)_Onion": {
+          "market": "Erragadda(Rythu Bazar)",
+          "commodity": "Onion",
+          "data_points": 449,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 421.91573420332105,
+                "rmse": 531.4371028385333,
+                "mape": 21.90047824777975,
+                "r2": -1.4356122440914798,
+                "n_samples": 112
+              },
+              {
+                "mae": 574.3781785571867,
+                "rmse": 718.9320355215159,
+                "mape": 30.797258906158977,
+                "r2": -0.22246159361227935,
+                "n_samples": 112
+              },
+              {
+                "mae": 778.4577854492427,
+                "rmse": 956.5283345908412,
+                "mape": 24.770430542910308,
+                "r2": -1.5459605519910578,
+                "n_samples": 112
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 57.14285714285714,
+                "width": 838.0617680141958,
+                "valid_intervals": 112
+              },
+              {
+                "coverage": 34.82142857142857,
+                "width": 711.0917484980099,
+                "valid_intervals": 112
+              },
+              {
+                "coverage": 39.285714285714285,
+                "width": 660.9419705983166,
+                "valid_intervals": 112
+              }
+            ]
+          }
+        },
+        "L B Nagar_Onion": {
+          "market": "L B Nagar",
+          "commodity": "Onion",
+          "data_points": 322,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 330.3656946758225,
+                "rmse": 404.8872342844817,
+                "mape": 25.330455129361027,
+                "r2": -0.5627206808596286,
+                "n_samples": 80
+              },
+              {
+                "mae": 607.4407763262809,
+                "rmse": 694.0107087850892,
+                "mape": 39.8340180255473,
+                "r2": -8.640247463765462,
+                "n_samples": 80
+              },
+              {
+                "mae": 778.8258891269976,
+                "rmse": 1165.1338930464128,
+                "mape": 32.182828396533246,
+                "r2": -1.3400278430524937,
+                "n_samples": 80
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 76.25,
+                "width": 978.5309651744625,
+                "valid_intervals": 80
+              },
+              {
+                "coverage": 21.25,
+                "width": 758.4629068247853,
+                "valid_intervals": 80
+              },
+              {
+                "coverage": 40.0,
+                "width": 677.4209935892575,
+                "valid_intervals": 80
+              }
+            ]
+          }
+        }
+      },
+      "commodities": [
+        "Onion"
+      ],
+      "market_names": [
+        "Bowenpally",
+        "Mahboob Manison",
+        "Gudimalkapur",
+        "L B Nagar",
+        "Erragadda(Rythu Bazar)"
+      ]
+    },
+    "potato_price_data2021-2024.csv": {
+      "filename": "potato_price_data2021-2024.csv",
+      "total_rows": 4755,
+      "processed_rows": 4755,
+      "markets": {
+        "Bowenpally_Potato": {
+          "market": "Bowenpally",
+          "commodity": "Potato",
+          "data_points": 1261,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 854.0554166730582,
+                "rmse": 1012.9363113792582,
+                "mape": 41.812956625742345,
+                "r2": -5.866685941651444,
+                "n_samples": 315
+              },
+              {
+                "mae": 829.3273955400497,
+                "rmse": 857.8664174886775,
+                "mape": 58.63369469176217,
+                "r2": -11.986642811364655,
+                "n_samples": 315
+              },
+              {
+                "mae": 780.8881178110659,
+                "rmse": 925.3258200192796,
+                "mape": 30.97608850341313,
+                "r2": -2.5790473275149233,
+                "n_samples": 315
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 15.873015873015872,
+                "width": 416.3302236751743,
+                "valid_intervals": 315
+              },
+              {
+                "coverage": 3.8095238095238098,
+                "width": 500.14758087591144,
+                "valid_intervals": 315
+              },
+              {
+                "coverage": 25.07936507936508,
+                "width": 487.58591280815057,
+                "valid_intervals": 315
+              }
+            ]
+          }
+        },
+        "Gudimalkapur_Potato": {
+          "market": "Gudimalkapur",
+          "commodity": "Potato",
+          "data_points": 1246,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 921.598401335245,
+                "rmse": 1017.8644881135989,
+                "mape": 46.58641789505721,
+                "r2": -7.310012044736162,
+                "n_samples": 311
+              },
+              {
+                "mae": 404.3486072717331,
+                "rmse": 456.6181520267184,
+                "mape": 29.588243840731437,
+                "r2": -3.051207090515306,
+                "n_samples": 311
+              },
+              {
+                "mae": 1005.7127964273121,
+                "rmse": 1125.8543252676138,
+                "mape": 41.96354262062968,
+                "r2": -3.494350335059992,
+                "n_samples": 311
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 7.395498392282958,
+                "width": 278.9521477262242,
+                "valid_intervals": 311
+              },
+              {
+                "coverage": 15.112540192926044,
+                "width": 284.48916243664746,
+                "valid_intervals": 311
+              },
+              {
+                "coverage": 9.646302250803858,
+                "width": 268.00379108072826,
+                "valid_intervals": 311
+              }
+            ]
+          }
+        },
+        "L B Nagar_Potato": {
+          "market": "L B Nagar",
+          "commodity": "Potato",
+          "data_points": 1020,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 753.2052666876632,
+                "rmse": 842.6765399710649,
+                "mape": 33.68397367834029,
+                "r2": -13.831296033302063,
+                "n_samples": 255
+              },
+              {
+                "mae": 644.5856112946226,
+                "rmse": 689.7748468287499,
+                "mape": 43.49459898352419,
+                "r2": -6.791624093769005,
+                "n_samples": 255
+              },
+              {
+                "mae": 872.3640063986256,
+                "rmse": 939.5195143419072,
+                "mape": 31.571593470472433,
+                "r2": -6.518010335386905,
+                "n_samples": 255
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 13.333333333333334,
+                "width": 484.49608325157175,
+                "valid_intervals": 255
+              },
+              {
+                "coverage": 6.2745098039215685,
+                "width": 363.8853377292034,
+                "valid_intervals": 255
+              },
+              {
+                "coverage": 9.411764705882353,
+                "width": 315.8098411272656,
+                "valid_intervals": 255
+              }
+            ]
+          }
+        },
+        "Mahboob Manison_Potato": {
+          "market": "Mahboob Manison",
+          "commodity": "Potato",
+          "data_points": 774,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 710.115373493805,
+                "rmse": 849.0329268469472,
+                "mape": 41.67056012139234,
+                "r2": -0.34190912772343207,
+                "n_samples": 193
+              },
+              {
+                "mae": 401.69537098692945,
+                "rmse": 466.735763505565,
+                "mape": 20.40291256817931,
+                "r2": -0.839319622897267,
+                "n_samples": 193
+              },
+              {
+                "mae": 1242.25441507439,
+                "rmse": 1417.1743352389117,
+                "mape": 43.37810380371874,
+                "r2": -4.2045650547505655,
+                "n_samples": 193
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 15.544041450777202,
+                "width": 345.4420422890163,
+                "valid_intervals": 193
+              },
+              {
+                "coverage": 41.45077720207254,
+                "width": 708.5920573956861,
+                "valid_intervals": 193
+              },
+              {
+                "coverage": 13.989637305699482,
+                "width": 783.4995720681817,
+                "valid_intervals": 193
+              }
+            ]
+          }
+        },
+        "Erragadda(Rythu Bazar)_Potato": {
+          "market": "Erragadda(Rythu Bazar)",
+          "commodity": "Potato",
+          "data_points": 454,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 319.7109434346785,
+                "rmse": 452.28802365599864,
+                "mape": 12.961903847315709,
+                "r2": -0.14629421036340062,
+                "n_samples": 113
+              },
+              {
+                "mae": 234.39134837865262,
+                "rmse": 282.54083923141496,
+                "mape": 10.79598657720291,
+                "r2": -2.127387438084125,
+                "n_samples": 113
+              },
+              {
+                "mae": 932.4497438521407,
+                "rmse": 1049.4947035756625,
+                "mape": 27.158873690290413,
+                "r2": -3.150486497210273,
+                "n_samples": 113
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 61.94690265486725,
+                "width": 608.2588105782224,
+                "valid_intervals": 113
+              },
+              {
+                "coverage": 73.45132743362832,
+                "width": 627.1429439456557,
+                "valid_intervals": 113
+              },
+              {
+                "coverage": 21.238938053097346,
+                "width": 550.7565546189153,
+                "valid_intervals": 113
+              }
+            ]
+          }
+        }
+      },
+      "commodities": [
+        "Potato"
+      ],
+      "market_names": [
+        "Bowenpally",
+        "L B Nagar",
+        "Gudimalkapur",
+        "Mahboob Manison",
+        "Erragadda(Rythu Bazar)"
+      ]
+    },
+    "tomato_price_data2021-2024.csv": {
+      "filename": "tomato_price_data2021-2024.csv",
+      "total_rows": 4421,
+      "processed_rows": 4421,
+      "markets": {
+        "Bowenpally_Tomato": {
+          "market": "Bowenpally",
+          "commodity": "Tomato",
+          "data_points": 1207,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 4071.720540171764,
+                "rmse": 4276.664502112535,
+                "mape": 417.8393296719724,
+                "r2": -20.850275296220097,
+                "n_samples": 301
+              },
+              {
+                "mae": 548.1878341041642,
+                "rmse": 888.7159099635784,
+                "mape": 32.1383259210002,
+                "r2": -0.3675443070534494,
+                "n_samples": 301
+              },
+              {
+                "mae": 908.1563895306615,
+                "rmse": 1265.4343319502793,
+                "mape": 41.38832287128516,
+                "r2": -0.4565182341783267,
+                "n_samples": 301
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 0.0,
+                "width": 576.9367803347612,
+                "valid_intervals": 301
+              },
+              {
+                "coverage": 55.14950166112956,
+                "width": 713.1655572291519,
+                "valid_intervals": 301
+              },
+              {
+                "coverage": 34.55149501661129,
+                "width": 669.5845198542207,
+                "valid_intervals": 301
+              }
+            ]
+          }
+        },
+        "Gudimalkapur_Tomato": {
+          "market": "Gudimalkapur",
+          "commodity": "Tomato",
+          "data_points": 1158,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 637.8274722439518,
+                "rmse": 696.6035908065709,
+                "mape": 100.9145357971717,
+                "r2": -0.5908430661716495,
+                "n_samples": 289
+              },
+              {
+                "mae": 491.26313462638194,
+                "rmse": 794.8776098818491,
+                "mape": 33.74220838226737,
+                "r2": -0.36139571127942305,
+                "n_samples": 289
+              },
+              {
+                "mae": 727.2641961231124,
+                "rmse": 910.843660185732,
+                "mape": 56.88498628992831,
+                "r2": 0.03469079106652806,
+                "n_samples": 289
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 16.608996539792386,
+                "width": 685.2939919570895,
+                "valid_intervals": 289
+              },
+              {
+                "coverage": 56.05536332179931,
+                "width": 656.0813808144972,
+                "valid_intervals": 289
+              },
+              {
+                "coverage": 19.031141868512112,
+                "width": 639.4128534312881,
+                "valid_intervals": 289
+              }
+            ]
+          }
+        },
+        "L B Nagar_Tomato": {
+          "market": "L B Nagar",
+          "commodity": "Tomato",
+          "data_points": 946,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 713.0702936995759,
+                "rmse": 1020.8953973790018,
+                "mape": 45.1779068064945,
+                "r2": -0.638457498997838,
+                "n_samples": 236
+              },
+              {
+                "mae": 808.738009261985,
+                "rmse": 1083.7308430044602,
+                "mape": 50.733077359580015,
+                "r2": -1.201545564737022,
+                "n_samples": 236
+              },
+              {
+                "mae": 1296.2940031455325,
+                "rmse": 1610.0757516818148,
+                "mape": 54.869368626507764,
+                "r2": -1.6028842614800722,
+                "n_samples": 236
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 45.76271186440678,
+                "width": 638.7070985349395,
+                "valid_intervals": 236
+              },
+              {
+                "coverage": 35.59322033898305,
+                "width": 761.0794516155078,
+                "valid_intervals": 236
+              },
+              {
+                "coverage": 16.94915254237288,
+                "width": 745.621609896509,
+                "valid_intervals": 236
+              }
+            ]
+          }
+        },
+        "Mahboob Manison_Tomato": {
+          "market": "Mahboob Manison",
+          "commodity": "Tomato",
+          "data_points": 688,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 1105.1154774422203,
+                "rmse": 1314.9463623208753,
+                "mape": 89.8914682684723,
+                "r2": 0.010784381269858145,
+                "n_samples": 172
+              },
+              {
+                "mae": 3105.4585196489807,
+                "rmse": 3341.0317957100724,
+                "mape": 303.83828731679847,
+                "r2": -44.331294119232595,
+                "n_samples": 172
+              },
+              {
+                "mae": 1227.2626691243347,
+                "rmse": 1492.6729533789119,
+                "mape": 46.06262050420575,
+                "r2": -1.0479779961329272,
+                "n_samples": 172
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 12.790697674418606,
+                "width": 735.6586143904905,
+                "valid_intervals": 172
+              },
+              {
+                "coverage": 0.0,
+                "width": 691.0386426975865,
+                "valid_intervals": 172
+              },
+              {
+                "coverage": 23.25581395348837,
+                "width": 701.367374081688,
+                "valid_intervals": 172
+              }
+            ]
+          }
+        },
+        "Erragadda(Rythu Bazar)_Tomato": {
+          "market": "Erragadda(Rythu Bazar)",
+          "commodity": "Tomato",
+          "data_points": 422,
+          "cv_results": {
+            "fallback_metrics": [
+              {
+                "mae": 1643.2183724603142,
+                "rmse": 1926.3673852360248,
+                "mape": 69.24775417386707,
+                "r2": -2.313286414760276,
+                "n_samples": 105
+              },
+              {
+                "mae": 658.2710434302775,
+                "rmse": 862.3947058682559,
+                "mape": 33.75078026695703,
+                "r2": 0.006924763099808051,
+                "n_samples": 105
+              },
+              {
+                "mae": 1364.346035104024,
+                "rmse": 1747.5308197757176,
+                "mape": 43.94776858652477,
+                "r2": -1.3152053208135301,
+                "n_samples": 105
+              }
+            ],
+            "ensemble_metrics": [],
+            "interval_coverage": [
+              {
+                "coverage": 4.761904761904762,
+                "width": 882.7299494091421,
+                "valid_intervals": 105
+              },
+              {
+                "coverage": 49.523809523809526,
+                "width": 1056.0727936523563,
+                "valid_intervals": 105
+              },
+              {
+                "coverage": 35.23809523809524,
+                "width": 1040.2682464920745,
+                "valid_intervals": 105
+              }
+            ]
+          }
+        }
+      },
+      "commodities": [
+        "Tomato"
+      ],
+      "market_names": [
+        "Bowenpally",
+        "Gudimalkapur",
+        "L B Nagar",
+        "Erragadda(Rythu Bazar)",
+        "Mahboob Manison"
+      ]
+    }
+  },
+  "summary": {
+    "total_datasets": 5,
+    "total_market_commodity_pairs": 25,
+    "fallback_performance": {
+      "mae": 1090.7721812613222,
+      "rmse": 1310.6055655308298,
+      "mape": 56.91165259273274,
+      "r2": -4.185281865285455,
+      "count": 75
+    },
+    "ensemble_performance": {
+      "mae": NaN,
+      "rmse": NaN,
+      "mape": NaN,
+      "r2": NaN,
+      "count": 0
+    },
+    "interval_coverage": {
+      "coverage": 30.036743888850317,
+      "width": 818.9448691148616,
+      "count": 75
+    }
+  }
+}

@@ -1,0 +1,26 @@
+ensemble_path,ensemble_type,has_m1_m2_meta,meta_horizons,xgb_path,xgb_exists,prophet_path,prophet_exists,lstm_path,lstm_exists,file_size_bytes
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Bowenpally\ensemble_Brinjal_Bowenpally.joblib,simple_stacked,True,0,,False,,False,,False,3750120
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Bowenpally\ensemble_Green Chilli_Bowenpally.joblib,simple_stacked,True,0,,False,,False,,False,4043016
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Bowenpally\ensemble_Onion_Bowenpally.joblib,simple_stacked,True,0,,False,,False,,False,3757752
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Bowenpally\ensemble_Potato_Bowenpally.joblib,simple_stacked,True,0,,False,,False,,False,3945672
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Bowenpally\ensemble_Tomato_Bowenpally.joblib,simple_stacked,True,0,,False,,False,,False,3729096
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Erragadda(Rythu_Bazar)\ensemble_Brinjal_Erragadda(Rythu Bazar).joblib,simple_stacked,True,0,,False,,False,,False,415224
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Erragadda(Rythu_Bazar)\ensemble_Green Chilli_Erragadda(Rythu Bazar).joblib,simple_stacked,True,0,,False,,False,,False,441432
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Erragadda(Rythu_Bazar)\ensemble_Onion_Erragadda(Rythu Bazar).joblib,simple_stacked,True,0,,False,,False,,False,507960
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Erragadda(Rythu_Bazar)\ensemble_Potato_Erragadda(Rythu Bazar).joblib,simple_stacked,True,0,,False,,False,,False,481752
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Erragadda(Rythu_Bazar)\ensemble_Tomato_Erragadda(Rythu Bazar).joblib,simple_stacked,True,0,,False,,False,,False,739944
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Gudimalkapur\ensemble_Brinjal_Gudimalkapur.joblib,simple_stacked,True,0,,False,,False,,False,3011976
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Gudimalkapur\ensemble_Green Chilli_Gudimalkapur.joblib,simple_stacked,True,0,,False,,False,,False,3920904
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Gudimalkapur\ensemble_Onion_Gudimalkapur.joblib,simple_stacked,True,0,,False,,False,,False,4370760
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Gudimalkapur\ensemble_Potato_Gudimalkapur.joblib,simple_stacked,True,0,,False,,False,,False,3500280
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Gudimalkapur\ensemble_Tomato_Gudimalkapur.joblib,simple_stacked,True,0,,False,,False,,False,3547224
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\L_B_Nagar\ensemble_Brinjal_L B Nagar.joblib,simple_stacked,True,0,,False,,False,,False,1390680
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\L_B_Nagar\ensemble_Green Chilli_L B Nagar.joblib,simple_stacked,True,0,,False,,False,,False,1558728
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\L_B_Nagar\ensemble_Onion_L B Nagar.joblib,simple_stacked,True,0,,False,,False,,False,1033272
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\L_B_Nagar\ensemble_Potato_L B Nagar.joblib,simple_stacked,True,0,,False,,False,,False,1645992
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\L_B_Nagar\ensemble_Tomato_L B Nagar.joblib,simple_stacked,True,0,,False,,False,,False,1942056
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Mahboob_Manison\ensemble_Brinjal_Mahboob Manison.joblib,simple_stacked,True,0,,False,,False,,False,1010088
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Mahboob_Manison\ensemble_Green Chilli_Mahboob Manison.joblib,simple_stacked,True,0,,False,,False,,False,1174968
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Mahboob_Manison\ensemble_Onion_Mahboob Manison.joblib,simple_stacked,True,0,,False,,False,,False,4856472
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Mahboob_Manison\ensemble_Potato_Mahboob Manison.joblib,simple_stacked,True,0,,False,,False,,False,1326744
+C:\Users\HP\OneDrive\Desktop\Marketwave - Copy\models\Mahboob_Manison\ensemble_Tomato_Mahboob Manison.joblib,simple_stacked,True,0,,False,,False,,False,1476216

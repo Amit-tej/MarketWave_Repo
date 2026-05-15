@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fig 5.6 - API Response Structure</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a2e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+    color: #e0e0e0;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #16213e;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #0f3460;
+  }
+  h1 { color: #e94560; font-size: 22px; text-align: center; margin-bottom: 24px; }
+  .request-box, .response-box {
+    background: #1a1a2e;
+    border-radius: 10px;
+    padding: 16px;
+    border: 1px solid #0f3460;
+    margin-bottom: 16px;
+  }
+  .request-box h3 { color: #28a745; font-size: 14px; margin-bottom: 12px; }
+  .response-box h3 { color: #e94560; font-size: 14px; margin-bottom: 12px; }
+  .method-tag {
+    background: #28a745; color: white; padding: 2px 8px;
+    border-radius: 4px; font-size: 12px; font-weight: bold;
+  }
+  .endpoint { font-family: monospace; color: #ffd700; margin-left: 8px; }
+  pre {
+    background: #0a0a1a; padding: 12px; border-radius: 6px;
+    font-family: 'Consolas', monospace; font-size: 12px;
+    color: #e0e0e0; overflow-x: auto; line-height: 1.5;
+    margin-top: 12px;
+  }
+  .arrow {
+    text-align: center; font-size: 24px; color: #e94560; margin: 8px 0;
+  }
+  .highlight-key { color: #ffd700; }
+  .highlight-string { color: #28a745; }
+  .highlight-number { color: #e94560; }
+  .highlight-bool { color: #0f3460; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🔌 API Request / Response Flow - MarketWave Backend</h1>
+
+  <div class="request-box">
+    <h3><span class="method-tag">POST</span><span class="endpoint">/predict</span></h3>
+    <div style="font-size: 12px; color: #888; margin-bottom: 8px;">Request Body (JSON)</div>
+    <pre>{
+  <span class="highlight-key">"market"</span>: <span class="highlight-string">"Bowenpally"</span>,
+  <span class="highlight-key">"commodity"</span>: <span class="highlight-string">"Tomato"</span>,
+  <span class="highlight-key">"horizon"</span>: <span class="highlight-number">30</span>,
+  <span class="highlight-key">"force_simple"</span>: <span class="highlight-bool">false</span>
+}</pre>
+  </div>
+
+  <div class="arrow">⬇️</div>
+
+  <div class="response-box">
+    <h3>Response Body (JSON) - Status: 200 OK</h3>
+    <pre>{
+  <span class="highlight-key">"prediction_id"</span>: <span class="highlight-string">"ensemble_Tomato_Bowenpally_1709123456"</span>,
+  <span class="highlight-key">"yhat"</span>: [
+    <span class="highlight-number">1245.32</span>, <span class="highlight-number">1267.85</span>, <span class="highlight-number">1298.44</span>, <span class="highlight-number">1289.12</span>,
+    <span class="highlight-number">1312.67</span>, <span class="highlight-number">1305.21</span>, <span class="highlight-number">1291.88</span>
+    <span class="highlight-string">// ... 30-day forecast values</span>
+  ],
+  <span class="highlight-key">"intervals"</span>: {
+    <span class="highlight-key">"80"</span>: [[<span class="highlight-number">1198.45</span>, <span class="highlight-number">1292.19</span>], [<span class="highlight-number">1212.30</span>, <span class="highlight-number">1323.40</span>]],
+    <span class="highlight-key">"90"</span>: [[<span class="highlight-number">1185.20</span>, <span class="highlight-number">1305.44</span>], [<span class="highlight-number">1198.90</span>, <span class="highlight-number">1336.80</span>]],
+    <span class="highlight-key">"95"</span>: [[<span class="highlight-number">1170.00</span>, <span class="highlight-number">1320.64</span>], [<span class="highlight-number">1185.60</span>, <span class="highlight-number">1350.10</span>]]
+  },
+  <span class="highlight-key">"base_preds"</span>: {
+    <span class="highlight-key">"xgb"</span>: [<span class="highlight-number">1230.50</span>, <span class="highlight-number">1255.20</span>, ...],
+    <span class="highlight-key">"prophet"</span>: [<span class="highlight-number">1248.90</span>, <span class="highlight-number">1270.15</span>, ...],
+    <span class="highlight-key">"lstm"</span>: [<span class="highlight-number">1256.10</span>, <span class="highlight-number">1278.30</span>, ...]
+  },
+  <span class="highlight-key">"current_market_price"</span>: <span class="highlight-number">1245.00</span>,
+  <span class="highlight-key">"scraped_price_data"</span>: {
+    <span class="highlight-key">"source"</span>: <span class="highlight-string">"Google Search"</span>,
+    <span class="highlight-key">"price_per_kg"</span>: <span class="highlight-number">12.45</span>
+  }
+}</pre>
+  </div>
+
+  <div style="margin-top: 16px; padding: 12px; background: #1a1a2e; border-radius: 8px; border: 1px solid #0f3460; font-size: 12px; color: #888;">
+    <strong style="color: #e94560;">Response Structure:</strong> Each prediction returns a unique prediction_id, 30-day forecast array (yhat), three confidence interval levels (80%, 90%, 95%), individual base model predictions for transparency, and real-time scraped market price for validation.
+  </div>
+</div>
+</body>
+</html>
